@@ -41,7 +41,7 @@
 			$third->add_grade(90);
 			$students['p789'] = $third;
 
-			ksort($students); // one of the many sort functions
+			ksort($students); // Sort by first name
 
 			foreach($students as $student)
 			    echo $student->toString();

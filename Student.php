@@ -1,6 +1,6 @@
 <?php
 /**
-* Description of Student
+* A class to represent student records
 * @author Tim
 */
 
@@ -20,6 +20,7 @@ class Student {
 		$this->grades[] = $grade;
 	}
 
+	//Calcuates the average grade of a student
 	function average() {
 		$total = 0;
 		foreach ($this->grades as $value)
@@ -27,6 +28,13 @@ class Student {
 		return $total / count($this->grades);
 	}
 
+	/*
+	Creates string representation of student record in this format:
+	Albert Einstein (75)
+	home: albert@braniacs.com
+	work1: a_einstein@bcit.ca
+	work2: albert@physics.mit.edu
+	*/
 	function toString() {
 	    $result = $this->first_name . ' ' . $this->surname;
 	    $result .= ' ('.$this->average().")\n";
